@@ -8,10 +8,20 @@
 import SwiftUI
 
 @main
-struct DAAppsViewControllerApp: App {
+struct DemoApp: App {
+    var artistId: Int = 383673904
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                AppStoreList(title: "Sample Apps", artistId: artistId)
+            }
         }
     }
 }
+
+#Preview {
+    NavigationView {
+        AppStoreList(title: "Sample Apps", artistId: 383673904)
+    }
+}
+

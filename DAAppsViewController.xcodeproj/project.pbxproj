@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		255665882D86EE67006971D8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		2565F3242D86155600147597 /* DAAppsViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAAppsViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2565F33C2D86159100147597 /* DAAppsViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = DAAppsViewController.podspec; sourceTree = "<group>"; };
+		2565F33D2D86159100147597 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		2565F33F2D86159100147597 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2565F3262D86155600147597 /* DAAppsViewController */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			explicitFileTypes = {
+				Resources/en.lproj/Localizable.strings = text.plist.strings;
+				Resources/es.lproj/Localizable.strings = text.plist.strings;
+			};
 			path = DAAppsViewController;
 			sourceTree = "<group>";
 		};
@@ -33,6 +41,10 @@
 			isa = PBXGroup;
 			children = (
 				2565F3262D86155600147597 /* DAAppsViewController */,
+				2565F33C2D86159100147597 /* DAAppsViewController.podspec */,
+				2565F33D2D86159100147597 /* LICENSE.md */,
+				2565F33F2D86159100147597 /* README.md */,
+				255665882D86EE67006971D8 /* Package.swift */,
 				2565F3252D86155600147597 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +102,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				es,
 			);
 			mainGroup = 2565F31B2D86155600147597;
 			minimizedProjectReferenceProxies = 1;
@@ -130,6 +142,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -191,6 +204,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -270,10 +284,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rnaharro.DAAppsViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
@@ -309,10 +324,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rnaharro.DAAppsViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
