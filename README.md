@@ -1,98 +1,95 @@
-# DAAppsViewController
+# AppStoreList
 
-`DAAppsViewController` is a simple way of displaying apps from the App Store in an aesthetically similar manner. The user is able to view each app's App Store page by launching an instance of `SKStoreProductViewController`. Particularly useful for showing an app developer's other apps.
+**AppStoreList** is a SwiftUI library that allows you to display a list of apps from the App Store in an aesthetically pleasing way. It uses `StoreKit` to fetch app details and presents a user-friendly list that supports navigation to the App Store.
 
-![Screenshot](https://github.com/danielamitay/DAAppsViewController/raw/master/screenshot.jpg)
+---
 
-## Installation
+## 🚀 Features
 
-- Copy over the `DAAppsViewController` folder to your project folder.
-- Add the **StoreKit** framework to your project.
-- `#import "DAAppsViewController.h"`
+- 📱 Fetch and display apps from the App Store.
+- 🎨 Fully designed for **SwiftUI**.
+- 🔍 Supports searching for apps by **artist ID, app ID, or bundle ID**.
+- 🔗 Opens the App Store page seamlessly.
+- 📡 Handles network requests asynchronously with `async/await`.
+- 🛠 Compatible with both **CocoaPods** and **Swift Package Manager**.
 
-### App Transport Security Settings
+---
 
-As of iOS 9.0, App Transport Security (ATS) is enforcing additional security requirements for HTTP-based networking requests. As a result, the images that `DAAppsViewController` attempts to load from Apple are unable to load without the proper exceptions. To make sure that everything works as expected, make sure to add the following settings to your app's Info.plist file. If your app has `NSAllowsArbitraryLoads: true` enabled, then this is unnecessary.
+## 📦 Installation
 
-![App Transport Security Settings](https://github.com/danielamitay/DAAppsViewController/raw/master/app-transport.jpg)
+### Swift Package Manager (SPM)
 
-## Usage
+To install via **Swift Package Manager**, follow these steps:
 
-Example project included (DAAppsViewControllerExample)
+1. Open **Xcode** and go to **File > Add Packages…**.
+2. Enter the repository URL:  https://github.com/rnaharro/AppStoreList
+3. Choose the **latest version** and click **Add Package**.
 
-### Displaying apps by a specific developer (useful for "Our other apps")
+### CocoaPods
 
-```objective-c
-DAAppsViewController *appsViewController = [[DAAppsViewController alloc] init];
-[appsViewController loadAppsWithArtistId:356087517 completionBlock:nil];
-[self.navigationController pushViewController:appsViewController animated:YES];
+To install via **CocoaPods**, add the following line to your `Podfile`:
+
+```ruby
+pod 'AppStoreList'
+```
+Then, run:
+
+```sh
+pod install
 ```
 
-### Displaying a predetermined set of apps
+## 📖 Usage
 
-By **appId**:
-```objective-c
-NSArray *appsArray = @[@575647534,@498151501,@482453112,@582790430,@543421080];
-DAAppsViewController *appsViewController = [[DAAppsViewController alloc] init];
-appsViewController.pageTitle = @"Apps by XXX"; // Optional
-[appsViewController loadAppsWithAppIds:appsArray completionBlock:nil];
-[self.navigationController pushViewController:appsViewController animated:YES];
+### Basic Example
+```swift
+import SwiftUI
+import AppStoreList
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            AppStoreList(title: "Top Apps", artistId: 383673904)
+        }
+    }
+}
 ```
 
-By **bundleId**:
-```objective-c
-NSArray *bundlesArray = @[@"com.flexibits.fantastical.iphone",@"com.samvermette.Transit",@"com.tripsyapp.tripsy",@"com.seatgeek.SeatGeek",@"com.bumptechnologies.flock.Release"];
-DAAppsViewController *appsViewController = [[DAAppsViewController alloc] init];
-[appsViewController loadAppsWithBundleIds:bundlesArray completionBlock:nil];
-[self.navigationController pushViewController:appsViewController animated:YES];
+Using a Custom ViewModel
+If you want to inject your own AppStoreViewModel, you can do:
+
+```swift
+let viewModel = AppStoreViewModel()
+AppStoreList(title: "My Apps", viewModel: viewModel)
+Opening the App Store Directly
+If you need to open an app's App Store page manually:
+
+Task {
+    await viewModel.presentApp(appObject)
+}
 ```
 
-### Displaying apps for a specific App Store search term
+## 🔧 Compatibility
 
-```objective-c
-DAAppsViewController *appsViewController = [[DAAppsViewController alloc] init];
-[appsViewController loadAppsWithSearchTerm:@"Radio" completionBlock:nil];
-[self.navigationController pushViewController:appsViewController animated:YES];
-```
+| Platform | Minimum Version |
+|----------|---------------|
+| iOS      | **16.0**      |
+| macOS    | ❌ Not Supported |
+| watchOS  | ❌ Not Supported |
+| tvOS     | ❌ Not Supported |
 
-## Notes
+- Requires **Xcode 14+**.
+- Fully supports **SwiftUI**.
+- Works with **Swift 5.7+**.
 
-### Compatibility
+## 🔄 Changelog
 
-iOS5.0+
+See the Releases page for details on updates.
 
-### Automatic Reference Counting (ARC) support
+## 📄 License
 
-`DAAppsViewController` was made with ARC enabled by default.
+AppStoreList is available under the MIT License. See the LICENSE file for more details.
 
-## Contact
+## 👥 Author
 
-- [@danielamitay](http://twitter.com/danielamitay)
-- hello@danielamitay.com
-- http://www.danielamitay.com
-
-If you use/enjoy `DAAppsViewController`, let me know!
-
-## License
-
-### MIT License
-
-Copyright (c) 2013 Daniel Amitay (http://www.danielamitay.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Developed by Ricardo N.
+Feel free to contribute or report issues on the GitHub repository.
