@@ -3,29 +3,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "DAAppsViewController",
+    name: "AppStoreList",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v16) // Requires iOS 16 for modern SwiftUI and StoreKit features
     ],
     products: [
         .library(
-            name: "DAAppsViewController",
-            targets: ["DAAppsViewController"]
+            name: "AppStoreList",
+            targets: ["AppStoreList"]
         ),
     ],
     targets: [
             .target(
-                name: "DAAppsViewController",
+                name: "AppStoreList",
                 path: ".",
-                exclude: ["DAAppsViewController/DAAppsViewControllerApp.swift"],
+                exclude: ["AppStoreList/AppStoreListDemoApp.swift"],
                 sources: [
-                    "DAAppsViewController/AppObject.swift",
-                    "DAAppsViewController/AppStoreList.swift",
-                    "DAAppsViewController/AppStoreViewModel.swift",
+                    "AppStoreList/AppObject.swift",
+                    "AppStoreList/AppStoreList.swift",
+                    "AppStoreList/AppStoreViewModel.swift",
                 ],
                 resources: [
-                    .process("DAAppsViewController/Resources")
+                    .process("AppStoreList/Resources")
                 ]
             )
         ]

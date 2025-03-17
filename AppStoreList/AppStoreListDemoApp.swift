@@ -1,6 +1,6 @@
 //
-//  DAAppsViewControllerApp.swift
-//  DAAppsViewController
+//  AppStoreListDemoApp.swift
+//  AppStoreList
 //
 //  Created by Ricardo Naharro on 15/3/25.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct DemoApp: App {
+struct AppStoreListDemoApp: App {
     var artistId: Int = 383673904
     var body: some Scene {
         WindowGroup {

@@ -108,24 +108,24 @@ private struct AppStoreRow: View {
                             .font(.system(size: 14))
                             .foregroundColor(.secondary)
                     }
-
-                    Spacer()
-
-                    // Botón "Get"
-                    Button(action: {}) {
-                        Text(app.formattedPrice)
-                            .font(.system(size: 12, weight: .bold))
-                            .frame(width: 60, height: 26)
-                            .foregroundColor(.accentColor)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 4)
-                                    .stroke(Color.accentColor, lineWidth: 1)
-                            )
-                    }
-                    .buttonStyle(.plain)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+
+            Spacer()
+
+            // Botón "Get"
+            Button(action: {}) {
+                Text(app.formattedPrice)
+                    .font(.system(size: 12, weight: .bold))
+                    .frame(width: 65, height: 28)
+                    .foregroundColor(.accentColor)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.accentColor, lineWidth: 1)
+                    )
+            }
+            .buttonStyle(.plain)
         }
         .padding(.vertical, 6)
         .background(Color(.systemBackground))
@@ -156,5 +156,6 @@ private struct StarsView: View {
 #Preview {
     NavigationView {
         AppStoreList(title: "Sample Apps", artistId: 383673904)
+            .environment(\.locale, .init(identifier: "es"))
     }
 }

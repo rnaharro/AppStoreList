@@ -8,20 +8,20 @@
 
 /* Begin PBXFileReference section */
 		255665882D86EE67006971D8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		2565F3242D86155600147597 /* DAAppsViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAAppsViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2565F33C2D86159100147597 /* DAAppsViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = DAAppsViewController.podspec; sourceTree = "<group>"; };
+		2565F3242D86155600147597 /* AppStoreList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2565F33C2D86159100147597 /* AppStoreList.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = AppStoreList.podspec; sourceTree = "<group>"; };
 		2565F33D2D86159100147597 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		2565F33F2D86159100147597 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2565F3262D86155600147597 /* DAAppsViewController */ = {
+		2565F3262D86155600147597 /* AppStoreList */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			explicitFileTypes = {
 				Resources/en.lproj/Localizable.strings = text.plist.strings;
 				Resources/es.lproj/Localizable.strings = text.plist.strings;
 			};
-			path = DAAppsViewController;
+			path = AppStoreList;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -40,8 +40,8 @@
 		2565F31B2D86155600147597 = {
 			isa = PBXGroup;
 			children = (
-				2565F3262D86155600147597 /* DAAppsViewController */,
-				2565F33C2D86159100147597 /* DAAppsViewController.podspec */,
+				2565F3262D86155600147597 /* AppStoreList */,
+				2565F33C2D86159100147597 /* AppStoreList.podspec */,
 				2565F33D2D86159100147597 /* LICENSE.md */,
 				2565F33F2D86159100147597 /* README.md */,
 				255665882D86EE67006971D8 /* Package.swift */,
@@ -52,7 +52,7 @@
 		2565F3252D86155600147597 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2565F3242D86155600147597 /* DAAppsViewController.app */,
+				2565F3242D86155600147597 /* AppStoreList.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,9 +60,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2565F3232D86155600147597 /* DAAppsViewController */ = {
+		2565F3232D86155600147597 /* AppStoreList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2565F3332D86155800147597 /* Build configuration list for PBXNativeTarget "DAAppsViewController" */;
+			buildConfigurationList = 2565F3332D86155800147597 /* Build configuration list for PBXNativeTarget "AppStoreList" */;
 			buildPhases = (
 				2565F3202D86155600147597 /* Sources */,
 				2565F3212D86155600147597 /* Frameworks */,
@@ -73,13 +73,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				2565F3262D86155600147597 /* DAAppsViewController */,
+				2565F3262D86155600147597 /* AppStoreList */,
 			);
-			name = DAAppsViewController;
+			name = AppStoreList;
 			packageProductDependencies = (
 			);
 			productName = DAAppsViewController;
-			productReference = 2565F3242D86155600147597 /* DAAppsViewController.app */;
+			productReference = 2565F3242D86155600147597 /* AppStoreList.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2565F31F2D86155600147597 /* Build configuration list for PBXProject "DAAppsViewController" */;
+			buildConfigurationList = 2565F31F2D86155600147597 /* Build configuration list for PBXProject "AppStoreList" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2565F3232D86155600147597 /* DAAppsViewController */,
+				2565F3232D86155600147597 /* AppStoreList */,
 			);
 		};
 /* End PBXProject section */
@@ -258,10 +258,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DAAppsViewController/DAAppsViewController.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AppStoreList/AppStoreList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DAAppsViewController/Preview Content\"";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"AppStoreList/Preview Content\"";
 				DEVELOPMENT_TEAM = 38X66KLWUX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -298,10 +299,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DAAppsViewController/DAAppsViewController.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AppStoreList/AppStoreList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DAAppsViewController/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AppStoreList/Preview Content\"";
 				DEVELOPMENT_TEAM = 38X66KLWUX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -336,7 +337,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2565F31F2D86155600147597 /* Build configuration list for PBXProject "DAAppsViewController" */ = {
+		2565F31F2D86155600147597 /* Build configuration list for PBXProject "AppStoreList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2565F3312D86155800147597 /* Debug */,
@@ -345,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2565F3332D86155800147597 /* Build configuration list for PBXNativeTarget "DAAppsViewController" */ = {
+		2565F3332D86155800147597 /* Build configuration list for PBXNativeTarget "AppStoreList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2565F3342D86155800147597 /* Debug */,

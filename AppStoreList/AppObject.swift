@@ -50,8 +50,8 @@ public struct AppObject: Identifiable, Equatable {
         self.minimumOsVersion = minimumOsVersion
         // Updated formattedPrice logic to handle FREE -> Get case
         var price = formattedPrice.uppercased()
-        if price == "FREE" {
-            price = "Get"
+        if price == "FREE" || price == "GRATIS" {
+            price = NSLocalizedString(price, comment: "")
         }
         self.formattedPrice = price
         
